@@ -8,7 +8,7 @@ class ShoeSelector::Scraper
       #doc selection-from-site ("").each do |category_type|
       category_attributes = {}
 
-      binding.pry
+      #binding.pry
  doc.css("#page-content > div:nth-child(3) > div > div > section:nth-child(7) > div.col-xs-12.vertical-push > h2").text
     end 
 end 

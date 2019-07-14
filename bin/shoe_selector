@@ -1,6 +1,10 @@
 #!usr/bin/env ruby
 
 require_relative "../lib/if_the_shoe_fits"
+require "bundler/setup"
+require "if_the_shoe_fits"
+
+
 
 ShoeSelector::Scraper.scrape
 
