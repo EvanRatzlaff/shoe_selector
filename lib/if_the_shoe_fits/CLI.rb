@@ -1,9 +1,6 @@
 #This is the controller: 
 class ShoeSelector::CLI
-    def self.save_name
-        @@name = name
-    end 
-    def welcome
+        def welcome
         hey_there
         restart
         pros_cons

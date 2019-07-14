@@ -14,3 +14,4 @@ class ShoeSelector::Scraper
 end 
 
 
+ 
