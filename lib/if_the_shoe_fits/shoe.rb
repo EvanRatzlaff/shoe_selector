@@ -6,10 +6,7 @@ class ShoeSelector::Shoe
         def initialize(attributes)
             attributes.each do |key, value|
                 self.send("#{key}=", value)
-        # @type = type 
-        # @closure = closure
-        # @material = material
-        # @@all << self
+       
             end
         end 
         def self.create(attributes)
@@ -22,7 +19,7 @@ class ShoeSelector::Shoe
             array.reverse.each do |attributes|
                 self.create(attributes)
             end
-        
+        #binding.pry
         end
 
         def save

@@ -2,5 +2,5 @@
 
 require_relative "../lib/if_the_shoe_fits"
 
-
+ShoeSelector::Shoe
 ShoeSelector::CLI.new.welcome

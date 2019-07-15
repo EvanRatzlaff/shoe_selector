@@ -1,12 +1,9 @@
 #This is the controller: 
 class ShoeSelector::CLI
-    
-
-        def welcome
+     def welcome
             ShoeSelector::Scraper.scrape 
-            puts "Please wait, everything is being hand-written..."
         hey_there
-        shoe_types
+        main_menu
         # pros_cons
         # done 
         end
@@ -17,30 +14,26 @@ class ShoeSelector::CLI
     puts "Nice to meet you #{name}!"
     end 
 
-#      def shoe_types
-#         @shoes = ShoeSelector::Shoe.shoes_list
-#         @shoes.each.with_index(1) do |shoe_type, i|
-#             puts "#{i}. #{shoe_type} "
-#         end
-#     end
-   
-#     def pros_cons
-#         number = nil
-#        while number != "exit"
-#         number = gets.strip
-#         if number.to_i > 0 
-#              @shoes[number.to_i - 1]
-#         elsif number == "restart"
-#             restart
-#         else number == "continue"
-    
-#         end
-#     end
-# end
-#     def features
-#         puts "These are the features"
-#     end 
-#     def done
-#     puts "Thanks for popping in! Have a great day!"
-#     end
+     def main_menu
+        puts "Let's get started on finding you your perfect climbing shoe. Type a number to continue."
+        puts "1. Pros & Cons of Each Shoe"
+        puts "2. I'm not interested"
+                number = gets.strip
+                if number == "1"
+                    what_we_scraped
+                elsif "2"
+                    done
+                else number > "2"
+                    puts "Invalid entry. Select a number or type exit"
+                    main_menu
+                    end
+        end
+    def what_we_scraped
+        ShoeSelector::Shoe.all.
+            puts "#{Shoe.type}"
+        
+    end
+    def done
+    puts "Thanks for popping in! Have a great day!"
+    end
 end

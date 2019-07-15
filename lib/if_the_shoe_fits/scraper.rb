@@ -10,16 +10,16 @@ class ShoeSelector::Scraper
 
         doc.css(".container").each do |shoe_aspects|
             shoe = {} 
-            shoe[:type] = doc.css("div.container h3")[1].text, doc.css("div.container h3")[2].text, doc.css("div.container h3")[3].text
+            shoe[:type] = doc.css("div.container h3")[1].text + doc.css(".container li")[3..7].text, doc.css("div.container h3")[2].text + doc.css(".container li")[8..12].text, doc.css("div.container h3")[3].text + doc.css(".container li")[13..17].text
             shoe[:closure] = doc.css("#ClimbingShoeFeatures p")[0].text,  doc.css("#ClimbingShoeFeatures p")[1].text, doc.css("#ClimbingShoeFeatures p")[2].text
-            shoe[:material] = doc.css("#ClimbingShoeFeatures p")[4..6].text
+            shoe[:material] = doc.css("#ClimbingShoeFeatures p")[4].text, doc.css("#ClimbingShoeFeatures p")[5].text,doc.css("#ClimbingShoeFeatures p")[6].text
             shoes_list << shoe
         end
 
         ShoeSelector::Shoe.create_from_collection(shoes_list)
  #doc.css("#search-results > ol > li:nth-child(1) > a > div > div.A6u5WwZLNPPJwzlJ > h2").text
     end 
-    
+
 
 end 
 
