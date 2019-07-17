@@ -1,6 +1,4 @@
-# You won't be yelled at, belittled, or scolded
-# You won't be put on the spot without support
-# There's nothing you can do to instantly fail or blow it
+
 class ShoeSelector::Scraper
     @@base_url = "https://www.rei.com/learn/expert-advice"
     def self.scrape
@@ -14,7 +12,6 @@ class ShoeSelector::Scraper
             shoe[:description] = div.css("p").text
                 shoes_list << shoe
             end
-            binding.pry
         ShoeSelector::Shoe.create_from_collection(shoes_list)
     end 
 

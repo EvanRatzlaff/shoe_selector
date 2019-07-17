@@ -9,16 +9,16 @@ class ShoeSelector::Shoe
        
             end
         end 
-        def self.create(type, description)
-            self.new(type, description).tap do |shoe| shoe.save
+        def self.create(attributes)
+            self.new(attributes).tap do |shoe| shoe.save
+                shoe 
         end
         end
 
         def self.create_from_collection(array)
             array.each do |attributes|
-                self.create(attributes[:type], attributes[:description])
+                self.create(attributes)
             end
-        binding.pry
         end
 
         def save
