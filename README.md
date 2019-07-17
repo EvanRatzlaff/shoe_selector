@@ -1,6 +1,8 @@
 # IfTheShoeFits
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/if_the_shoe_fits`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to my first gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/if_the_shoe_fits`. To experiment with that code, run `bin/console` for an interactive prompt.
+I hope you guys enjoy something that I am actually kinda proud of making. I have NEVER coded before starting with flatiron and I already feel like I've learned a lot!
+
 
 TODO: Delete this and the text above, and describe your gem
 

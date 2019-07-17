@@ -1,5 +1,8 @@
 #This is the controller: 
 class ShoeSelector::CLI
+    name = gets.chomp
+    @@name = name
+
      def welcome
             ShoeSelector::Scraper.scrape 
         hey_there
@@ -10,8 +13,8 @@ class ShoeSelector::CLI
 
     def hey_there
     puts "Greetings, climber! Please enter your name so we can get better acquainted."
-    name = gets.chomp
-    puts "Nice to meet you #{name}!"
+    @@name
+    puts "Nice to meet you #{@@name}!"
     end 
 
      def main_menu
@@ -29,11 +32,11 @@ class ShoeSelector::CLI
                     end
         end
     def what_we_scraped
-        ShoeSelector::Shoe.all.
-            puts "#{Shoe.type}"
-        
+        ShoeSelector::Shoe.all.each.with_index(1) do |shoe, index|
+            puts "#{i},  #{shoe.type}"
+        end 
     end
     def done
-    puts "Thanks for popping in! Have a great day!"
+    puts "Thanks for popping in! Have a great day, #{@@name}"
     end
 end
